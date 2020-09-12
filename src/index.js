@@ -13,6 +13,10 @@ import idra from './assets/images/idra.jpg';
 import np from './assets/images/np.jpg';
 import sage from './assets/images/sage.jpg';
 import plant from './assets/models/scene.glb';
+import {
+  isBrowser,
+  isMobile
+} from "react-device-detect";
 
 function useWobble(factor = 1, fn = 'sin', cb) {
   const ref = useRef()
@@ -120,7 +124,7 @@ function App() {
         <Block factor={1.5} offset={1}>
           <HTML center portal={domContent}>
             <div style={{ display: 'flex', width: '100%'}}>
-              <div style={{ display: 'flex', width: '100%', width: '60vw', flexDirection: 'column'}}>
+              <div style={{ display: 'flex', width: '100%', width: isMobile ? '80vw' : '60vw', flexDirection: 'column'}}>
                 <p>Esplorate e riscoprite insieme a noi uno dei luoghi più magici della città, che per l’occasione verrà acceso da una nuova luce. L’edizione di quest’anno, Augmented Nature, è pensata insieme all'Orto Botanico e sostenuta da Fondazione della Comunità Bergamasca e racconta il mondo vegetale partendo da una riflessione su uno dei meccanismi più affascinanti della botanica, il fototropismo.
               </p>
               </div>
@@ -135,7 +139,7 @@ function App() {
               {/* <div style={{ display: 'flex', width: '50%'}}>
                 <img src={planar01} style={{ width: '300px'}} />
               </div> */}
-              <div style={{ display: 'flex', width: '60vw', flexDirection: 'column'}}>
+              <div style={{ display: 'flex', width: isMobile ? '80vw' : '60vw', flexDirection: 'column'}}>
                 <h2>Nature Perpétuelle</h2>
                 <h4>Installazione cinetica a cura di MiDi // 
 Partner tecnico Bee Innovative</h4>
@@ -156,7 +160,7 @@ Questo, ai nostri occhi, è il perpetuo movimento della natura, che continua a v
               {/* <div style={{ display: 'flex', width: '50%'}}>
                 <img src={planar01} style={{ width: '300px'}} />
               </div> */}
-              <div style={{ display: 'flex', width: '60vw', flexDirection: 'column'}}>
+              <div style={{ display: 'flex', width: isMobile ? '80vw' : '60vw', flexDirection: 'column'}}>
                 <h2>Matter Flows</h2>
                 <h4>Sage Jenson // Video Installazione</h4>
                 <p>
@@ -175,7 +179,7 @@ Matter Flows si basa sul lavoro dei biologi computazionali attorno alle reti di 
               {/* <div style={{ display: 'flex', width: '50%'}}>
                 <img src={planar01} style={{ width: '300px'}} />
               </div> */}
-              <div style={{ display: 'flex', width: '60vw', flexDirection: 'column'}}>
+              <div style={{ display: 'flex', width: isMobile ? '80vw' : '60vw', flexDirection: 'column'}}>
                 <h2>IDRA</h2>
                 <h4>Performance musicale a cura di Francesca Pavesi</h4>
                 <p>
@@ -199,7 +203,7 @@ Sonorità Ambient, Soundscape e texture organiche si fondono attraverso l’uso 
 
         <Block factor={1.5} offset={7}>
           <HTML center portal={domContent}>
-            <div style={{ display: 'flex', width: '60vw', flexDirection: 'column'}}>
+            <div style={{ display: 'flex', width: isMobile ? '80vw' : '60vw', flexDirection: 'column'}}>
               <p>
               Zone Digitali, che nasce nel 2018 ed è oggi alla sua terza edizione, è l’evento annuale organizzato da MiDi dedicato all’utilizzo dei linguaggi digitali in relazione all’arte in tutte le sue forme. 
 Arte digitale, ibridazione tra linguaggi e riqualificazione urbana: questi sono i focus su cui MiDi concentra la sua attività, nonché le colonne portanti di Zone Digitali. Ogni anno uno spazio cittadino (nel 2018 la ex centrale di Daste e Spalenga e nel 2019 la ex chiesa di San Sisto a Colognola) viene riacceso grazie agli strumenti tecnologici alle opere digitali che ospita.</p>
@@ -214,12 +218,12 @@ Un percorso elaborato, quello che ha portato MiDi a creare lo Zone Digitali di q
 
         <Block factor={1.5} offset={8}>
           <HTML center portal={domContent}>
-            <div style={{ display: 'flex', width: '60vw'}}>
+            <div style={{ display: 'flex', width: isMobile ? '80vw' : '60vw'}}>
               <h2></h2>
             </div>
-            <div style={{ display: 'flex', width: '60vw', alignItems: 'center', justifyContent: 'center'}}>
-              <p style={{ marginTop: '0px', fontSize: '40px', marginRight: '15px'}}>Sviluppato da</p>
-              <a target='_blank' href="https://instagram.com/encoded.studio"><img src={logo} width={300} /></a>
+            <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', width: isMobile ? '80vw' : '60vw', alignItems: 'center', justifyContent: 'center'}}>
+              <p style={{ marginTop: '0px', fontSize: isMobile ? '22px' : '40px', marginRight: '15px'}}>Sviluppato da</p>
+              <a target='_blank' href="https://instagram.com/encoded.studio"><img src={logo} width={isMobile ? 150 : 300} /></a>
             </div>
           </HTML>
         </Block>

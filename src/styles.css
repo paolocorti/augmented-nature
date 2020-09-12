@@ -60,7 +60,7 @@ h1 {
 
 h2 {
   font-family: 'Objective', sans-serif;
-  font-style: normal;
+  font-style: bold;
   font-weight: 300;
   color: white;
   font-size: 4vw;
@@ -287,11 +287,19 @@ a:hover {
     top: 2rem;
     right: 2rem;
   }
+  .jumbo {
+    width: 80%;
+  }
   .jumbo h1 {
-    font-size: 46px;
+    font-size: 40px;
     line-height: 46px;
-    letter-spacing: 26px;
-    margin-left: 26px;
+    margin-left: 0;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  p {
+    font-size: 18px;
   }
 }
 
