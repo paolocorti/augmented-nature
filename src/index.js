@@ -13,6 +13,9 @@ import idra from './assets/images/idra.jpg';
 import np from './assets/images/np.jpg';
 import sage from './assets/images/sage.jpg';
 import plant from './assets/models/scene.glb';
+import partners from './assets/images/zd20_loghi.png'
+import plant1 from './assets/images/plant_1.jpg'
+import plant2 from './assets/images/plant_2.jpg'
 import {
   isBrowser,
   isMobile
@@ -193,11 +196,11 @@ Sonorità Ambient, Soundscape e texture organiche si fondono attraverso l’uso 
         </Block>
 
         <Block factor={1.5} offset={5}>
-          <Panel side='left' scale={[2, 2, 0.6]} texture={idra} />
+          <Panel side='left' scale={[2, 2, 0.6]} texture={plant1} />
         </Block>
 
         <Block factor={1.5} offset={6}>
-          <Panel side='right' scale={[2, 2, 0.6]} texture={idra} />
+          <Panel side='right' scale={[2, 2, 0.6]} texture={plant2} />
         </Block>
 
 
@@ -234,7 +237,12 @@ Un percorso elaborato, quello che ha portato MiDi a creare lo Zone Digitali di q
       <div className="scrollArea" ref={scrollArea} onScroll={onScroll} {...events}>
         <div style={{ position: 'sticky', top: 0 }} ref={domContent} />
         <div style={{ height: `${state.pages * 85}vh` }} />
+        <div className="footer">
+          <img src={partners} style={{ width: '100%', marginBottom: -10}} alt={'Zone Digitali lighi dei partner'} />
+        </div>
       </div>
+
+      
     </>
   )
 }
